@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "QTFacade.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    if (QTFacadeShared.canRestoreSession) {
+        [QTFacadeShared restoreSession:^(NSError *error) {
+            if (error) {
+                NSLog(@"%@", error);
+            }
+        }];
+    } else {
+        [QTFacadeShared loginWithEmail:@"bibi@gmail.com" password:@"123456" completion:^(NSError *error) {
+            if (error) {
+                NSLog(@"%@", error);
+            }
+        }];
+    }
     return YES;
 }
 

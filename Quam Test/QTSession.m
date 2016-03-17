@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  QTSession.m
 //  Quam Test
 //
 //  Created by ruckef on 16.03.16.
 //  Copyright © 2016 ruckef. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "QTSession.h"
 
-@interface ViewController : UIViewController
-
+@implementation QTSession
 
 @end
-

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="2Vg-50-VLa" customClass="QTParallaxHeader">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="236"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="236"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-W5-8bZ">
+                        <rect key="frame" x="0.0" y="0.0" width="352" height="236"/>
+                    </imageView>
+                    <visualEffectView opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ods-1x-Pc6">
+                        <rect key="frame" x="0.0" y="0.0" width="352" height="236"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3XO-rm-RNb">
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="236"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMC-FF-hHw">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="oUV-Ux-tOh">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </view>
+                                    <vibrancyEffect>
+                                        <blurEffect style="light"/>
+                                    </vibrancyEffect>
+                                </visualEffectView>
+                            </subviews>
+                        </view>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="Ods-1x-Pc6" firstAttribute="top" secondItem="2Vg-50-VLa" secondAttribute="top" id="E9P-Il-Gzk"/>
+                <constraint firstAttribute="trailing" secondItem="9u3-W5-8bZ" secondAttribute="trailing" id="EDd-pS-skL"/>
+                <constraint firstAttribute="trailing" secondItem="Ods-1x-Pc6" secondAttribute="trailing" id="GcA-4g-5zZ"/>
+                <constraint firstAttribute="bottom" secondItem="Ods-1x-Pc6" secondAttribute="bottom" id="X3H-C0-bID"/>
+                <constraint firstItem="9u3-W5-8bZ" firstAttribute="top" secondItem="2Vg-50-VLa" secondAttribute="top" id="mJg-fC-Gay"/>
+                <constraint firstItem="9u3-W5-8bZ" firstAttribute="leading" secondItem="2Vg-50-VLa" secondAttribute="leading" id="u8W-tV-obH"/>
+                <constraint firstItem="Ods-1x-Pc6" firstAttribute="leading" secondItem="2Vg-50-VLa" secondAttribute="leading" id="wU1-3d-yXp"/>
+                <constraint firstAttribute="bottom" secondItem="9u3-W5-8bZ" secondAttribute="bottom" id="z7O-fh-WH9"/>
+            </constraints>
+            <size key="customSize" width="352" height="236"/>
+            <connections>
+                <outlet property="imageView" destination="9u3-W5-8bZ" id="MSk-dG-qhR"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="262"/>
+        </collectionViewCell>
+    </objects>
+</document>

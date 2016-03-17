@@ -7,25 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5B29C1655DBC2D2DF6B7D29 /* libPods-Quam Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B659B47FF6D30E6D47899AC0 /* libPods-Quam Test.a */; };
 		D48EBB9E1C9990F900BDB700 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBB9D1C9990F900BDB700 /* main.m */; };
 		D48EBBA11C9990F900BDB700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBA01C9990F900BDB700 /* AppDelegate.m */; };
-		D48EBBA41C9990F900BDB700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBA31C9990F900BDB700 /* ViewController.m */; };
 		D48EBBA71C9990F900BDB700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48EBBA51C9990F900BDB700 /* Main.storyboard */; };
 		D48EBBA91C9990F900BDB700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48EBBA81C9990F900BDB700 /* Assets.xcassets */; };
 		D48EBBAC1C9990F900BDB700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48EBBAA1C9990F900BDB700 /* LaunchScreen.storyboard */; };
+		D48EBBB91C99973500BDB700 /* QTFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBB81C99973500BDB700 /* QTFacade.m */; };
+		D48EBBBD1C99984500BDB700 /* QTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBBC1C99984500BDB700 /* QTUser.m */; };
+		D48EBBC01C99986600BDB700 /* QTSession.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBBF1C99986600BDB700 /* QTSession.m */; };
+		D48EBBC31C99992C00BDB700 /* QTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBC21C99992C00BDB700 /* QTNetworkManager.m */; };
+		D48EBBC61C999C5E00BDB700 /* QTSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBC51C999C5E00BDB700 /* QTSettingsManager.m */; };
+		D48EBBCD1C99FB7200BDB700 /* QTPost.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBCC1C99FB7200BDB700 /* QTPost.m */; };
+		D48EBBD11C99FC9600BDB700 /* QTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBD01C99FC9600BDB700 /* QTObject.m */; };
+		D48EBBD41C9A03FC00BDB700 /* QTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBD31C9A03FC00BDB700 /* QTMainViewController.m */; };
+		D48EBBD71C9A0AC100BDB700 /* QTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBD61C9A0AC100BDB700 /* QTCollectionViewCell.m */; };
+		D48EBBD91C9A0D4B00BDB700 /* QTParallaxHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48EBBD81C9A0D4B00BDB700 /* QTParallaxHeader.xib */; };
+		D48EBBDE1C9A258200BDB700 /* QTCollectionViewParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBDD1C9A258200BDB700 /* QTCollectionViewParallaxLayout.m */; };
+		D48EBBE11C9A357A00BDB700 /* QTParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBE01C9A357A00BDB700 /* QTParallaxHeader.m */; };
+		D48EBBE41C9A42EB00BDB700 /* QTRoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBE31C9A42EB00BDB700 /* QTRoundedImageView.m */; };
+		D48EBBE91C9A4F5F00BDB700 /* QTCategoriesStillHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48EBBE81C9A4F5F00BDB700 /* QTCategoriesStillHeader.xib */; };
+		D48EBBEC1C9A5E0900BDB700 /* QTUserInfoHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBEB1C9A5E0900BDB700 /* QTUserInfoHeader.m */; };
+		D48EBBF11C9A6C3A00BDB700 /* QTUserAdditionalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EBBF01C9A6C3A00BDB700 /* QTUserAdditionalHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170F1A2D8990FA4A235AB9BB /* Pods-Quam Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quam Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quam Test/Pods-Quam Test.release.xcconfig"; sourceTree = "<group>"; };
+		8DC0A2C7F0F661A8ADF97C6E /* Pods-Quam Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quam Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quam Test/Pods-Quam Test.debug.xcconfig"; sourceTree = "<group>"; };
+		B659B47FF6D30E6D47899AC0 /* libPods-Quam Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Quam Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48EBB991C9990F900BDB700 /* Quam Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quam Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48EBB9D1C9990F900BDB700 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D48EBB9F1C9990F900BDB700 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D48EBBA01C9990F900BDB700 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D48EBBA21C9990F900BDB700 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D48EBBA31C9990F900BDB700 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D48EBBA61C9990F900BDB700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D48EBBA81C9990F900BDB700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48EBBAB1C9990F900BDB700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48EBBAD1C9990F900BDB700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48EBBB71C99973500BDB700 /* QTFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTFacade.h; sourceTree = "<group>"; };
+		D48EBBB81C99973500BDB700 /* QTFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTFacade.m; sourceTree = "<group>"; };
+		D48EBBBB1C99984500BDB700 /* QTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTUser.h; sourceTree = "<group>"; };
+		D48EBBBC1C99984500BDB700 /* QTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTUser.m; sourceTree = "<group>"; };
+		D48EBBBE1C99986600BDB700 /* QTSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTSession.h; sourceTree = "<group>"; };
+		D48EBBBF1C99986600BDB700 /* QTSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTSession.m; sourceTree = "<group>"; };
+		D48EBBC11C99992C00BDB700 /* QTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTNetworkManager.h; sourceTree = "<group>"; };
+		D48EBBC21C99992C00BDB700 /* QTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTNetworkManager.m; sourceTree = "<group>"; };
+		D48EBBC41C999C5E00BDB700 /* QTSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTSettingsManager.h; sourceTree = "<group>"; };
+		D48EBBC51C999C5E00BDB700 /* QTSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTSettingsManager.m; sourceTree = "<group>"; };
+		D48EBBC71C99A53600BDB700 /* QTDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTDefinitions.h; sourceTree = "<group>"; };
+		D48EBBCB1C99FB7200BDB700 /* QTPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTPost.h; sourceTree = "<group>"; };
+		D48EBBCC1C99FB7200BDB700 /* QTPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTPost.m; sourceTree = "<group>"; };
+		D48EBBCF1C99FC9600BDB700 /* QTObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTObject.h; sourceTree = "<group>"; };
+		D48EBBD01C99FC9600BDB700 /* QTObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTObject.m; sourceTree = "<group>"; };
+		D48EBBD21C9A03FC00BDB700 /* QTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTMainViewController.h; sourceTree = "<group>"; };
+		D48EBBD31C9A03FC00BDB700 /* QTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTMainViewController.m; sourceTree = "<group>"; };
+		D48EBBD51C9A0AC100BDB700 /* QTCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTCollectionViewCell.h; sourceTree = "<group>"; };
+		D48EBBD61C9A0AC100BDB700 /* QTCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTCollectionViewCell.m; sourceTree = "<group>"; };
+		D48EBBD81C9A0D4B00BDB700 /* QTParallaxHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QTParallaxHeader.xib; sourceTree = "<group>"; };
+		D48EBBDC1C9A258200BDB700 /* QTCollectionViewParallaxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTCollectionViewParallaxLayout.h; sourceTree = "<group>"; };
+		D48EBBDD1C9A258200BDB700 /* QTCollectionViewParallaxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTCollectionViewParallaxLayout.m; sourceTree = "<group>"; };
+		D48EBBDF1C9A357A00BDB700 /* QTParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTParallaxHeader.h; sourceTree = "<group>"; };
+		D48EBBE01C9A357A00BDB700 /* QTParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTParallaxHeader.m; sourceTree = "<group>"; };
+		D48EBBE21C9A42EB00BDB700 /* QTRoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRoundedImageView.h; sourceTree = "<group>"; };
+		D48EBBE31C9A42EB00BDB700 /* QTRoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRoundedImageView.m; sourceTree = "<group>"; };
+		D48EBBE81C9A4F5F00BDB700 /* QTCategoriesStillHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QTCategoriesStillHeader.xib; sourceTree = "<group>"; };
+		D48EBBEA1C9A5E0900BDB700 /* QTUserInfoHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTUserInfoHeader.h; sourceTree = "<group>"; };
+		D48EBBEB1C9A5E0900BDB700 /* QTUserInfoHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTUserInfoHeader.m; sourceTree = "<group>"; };
+		D48EBBEF1C9A6C3A00BDB700 /* QTUserAdditionalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTUserAdditionalHeader.h; sourceTree = "<group>"; };
+		D48EBBF01C9A6C3A00BDB700 /* QTUserAdditionalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTUserAdditionalHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +81,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B29C1655DBC2D2DF6B7D29 /* libPods-Quam Test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15EEC788469EA660905031A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B659B47FF6D30E6D47899AC0 /* libPods-Quam Test.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDF774514674886DB44B8A77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DC0A2C7F0F661A8ADF97C6E /* Pods-Quam Test.debug.xcconfig */,
+				170F1A2D8990FA4A235AB9BB /* Pods-Quam Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D48EBB901C9990F900BDB700 = {
 			isa = PBXGroup;
 			children = (
 				D48EBB9B1C9990F900BDB700 /* Quam Test */,
 				D48EBB9A1C9990F900BDB700 /* Products */,
+				CDF774514674886DB44B8A77 /* Pods */,
+				15EEC788469EA660905031A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +126,8 @@
 		D48EBB9B1C9990F900BDB700 /* Quam Test */ = {
 			isa = PBXGroup;
 			children = (
-				D48EBB9F1C9990F900BDB700 /* AppDelegate.h */,
-				D48EBBA01C9990F900BDB700 /* AppDelegate.m */,
-				D48EBBA21C9990F900BDB700 /* ViewController.h */,
-				D48EBBA31C9990F900BDB700 /* ViewController.m */,
-				D48EBBA51C9990F900BDB700 /* Main.storyboard */,
-				D48EBBA81C9990F900BDB700 /* Assets.xcassets */,
-				D48EBBAA1C9990F900BDB700 /* LaunchScreen.storyboard */,
-				D48EBBAD1C9990F900BDB700 /* Info.plist */,
+				D48EBBB41C9993CC00BDB700 /* Classes */,
+				D48EBBB31C9993BB00BDB700 /* Resources */,
 				D48EBB9C1C9990F900BDB700 /* Supporting Files */,
 			);
 			path = "Quam Test";
@@ -79,6 +141,81 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D48EBBB31C9993BB00BDB700 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D48EBBA51C9990F900BDB700 /* Main.storyboard */,
+				D48EBBAA1C9990F900BDB700 /* LaunchScreen.storyboard */,
+				D48EBBD81C9A0D4B00BDB700 /* QTParallaxHeader.xib */,
+				D48EBBE81C9A4F5F00BDB700 /* QTCategoriesStillHeader.xib */,
+				D48EBBAD1C9990F900BDB700 /* Info.plist */,
+				D48EBBA81C9990F900BDB700 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D48EBBB41C9993CC00BDB700 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D48EBB9F1C9990F900BDB700 /* AppDelegate.h */,
+				D48EBBA01C9990F900BDB700 /* AppDelegate.m */,
+				D48EBBBA1C99983700BDB700 /* Model */,
+				D48EBBB61C9993DC00BDB700 /* Business */,
+				D48EBBB51C9993D600BDB700 /* UI */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D48EBBB51C9993D600BDB700 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D48EBBD21C9A03FC00BDB700 /* QTMainViewController.h */,
+				D48EBBD31C9A03FC00BDB700 /* QTMainViewController.m */,
+				D48EBBDC1C9A258200BDB700 /* QTCollectionViewParallaxLayout.h */,
+				D48EBBDD1C9A258200BDB700 /* QTCollectionViewParallaxLayout.m */,
+				D48EBBDF1C9A357A00BDB700 /* QTParallaxHeader.h */,
+				D48EBBE01C9A357A00BDB700 /* QTParallaxHeader.m */,
+				D48EBBEA1C9A5E0900BDB700 /* QTUserInfoHeader.h */,
+				D48EBBEB1C9A5E0900BDB700 /* QTUserInfoHeader.m */,
+				D48EBBEF1C9A6C3A00BDB700 /* QTUserAdditionalHeader.h */,
+				D48EBBF01C9A6C3A00BDB700 /* QTUserAdditionalHeader.m */,
+				D48EBBD51C9A0AC100BDB700 /* QTCollectionViewCell.h */,
+				D48EBBD61C9A0AC100BDB700 /* QTCollectionViewCell.m */,
+				D48EBBE21C9A42EB00BDB700 /* QTRoundedImageView.h */,
+				D48EBBE31C9A42EB00BDB700 /* QTRoundedImageView.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		D48EBBB61C9993DC00BDB700 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				D48EBBC71C99A53600BDB700 /* QTDefinitions.h */,
+				D48EBBB71C99973500BDB700 /* QTFacade.h */,
+				D48EBBB81C99973500BDB700 /* QTFacade.m */,
+				D48EBBC11C99992C00BDB700 /* QTNetworkManager.h */,
+				D48EBBC21C99992C00BDB700 /* QTNetworkManager.m */,
+				D48EBBC41C999C5E00BDB700 /* QTSettingsManager.h */,
+				D48EBBC51C999C5E00BDB700 /* QTSettingsManager.m */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
+		D48EBBBA1C99983700BDB700 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D48EBBBE1C99986600BDB700 /* QTSession.h */,
+				D48EBBBF1C99986600BDB700 /* QTSession.m */,
+				D48EBBBB1C99984500BDB700 /* QTUser.h */,
+				D48EBBBC1C99984500BDB700 /* QTUser.m */,
+				D48EBBCB1C99FB7200BDB700 /* QTPost.h */,
+				D48EBBCC1C99FB7200BDB700 /* QTPost.m */,
+				D48EBBCF1C99FC9600BDB700 /* QTObject.h */,
+				D48EBBD01C99FC9600BDB700 /* QTObject.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D48EBBB01C9990F900BDB700 /* Build configuration list for PBXNativeTarget "Quam Test" */;
 			buildPhases = (
+				5FCB846AD0002BE8A0815891 /* Check Pods Manifest.lock */,
 				D48EBB951C9990F900BDB700 /* Sources */,
 				D48EBB961C9990F900BDB700 /* Frameworks */,
 				D48EBB971C9990F900BDB700 /* Resources */,
+				9F6272A6A32BEE65D059108F /* Embed Pods Frameworks */,
+				90C01CB104E1F86EC6C28705 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +276,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48EBBD91C9A0D4B00BDB700 /* QTParallaxHeader.xib in Resources */,
+				D48EBBE91C9A4F5F00BDB700 /* QTCategoriesStillHeader.xib in Resources */,
 				D48EBBAC1C9990F900BDB700 /* LaunchScreen.storyboard in Resources */,
 				D48EBBA91C9990F900BDB700 /* Assets.xcassets in Resources */,
 				D48EBBA71C9990F900BDB700 /* Main.storyboard in Resources */,
@@ -144,14 +286,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5FCB846AD0002BE8A0815891 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90C01CB104E1F86EC6C28705 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quam Test/Pods-Quam Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F6272A6A32BEE65D059108F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quam Test/Pods-Quam Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D48EBB951C9990F900BDB700 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48EBBA41C9990F900BDB700 /* ViewController.m in Sources */,
 				D48EBBA11C9990F900BDB700 /* AppDelegate.m in Sources */,
+				D48EBBB91C99973500BDB700 /* QTFacade.m in Sources */,
+				D48EBBD11C99FC9600BDB700 /* QTObject.m in Sources */,
+				D48EBBC01C99986600BDB700 /* QTSession.m in Sources */,
+				D48EBBE11C9A357A00BDB700 /* QTParallaxHeader.m in Sources */,
+				D48EBBD71C9A0AC100BDB700 /* QTCollectionViewCell.m in Sources */,
 				D48EBB9E1C9990F900BDB700 /* main.m in Sources */,
+				D48EBBBD1C99984500BDB700 /* QTUser.m in Sources */,
+				D48EBBD41C9A03FC00BDB700 /* QTMainViewController.m in Sources */,
+				D48EBBF11C9A6C3A00BDB700 /* QTUserAdditionalHeader.m in Sources */,
+				D48EBBDE1C9A258200BDB700 /* QTCollectionViewParallaxLayout.m in Sources */,
+				D48EBBC31C99992C00BDB700 /* QTNetworkManager.m in Sources */,
+				D48EBBCD1C99FB7200BDB700 /* QTPost.m in Sources */,
+				D48EBBEC1C9A5E0900BDB700 /* QTUserInfoHeader.m in Sources */,
+				D48EBBC61C999C5E00BDB700 /* QTSettingsManager.m in Sources */,
+				D48EBBE41C9A42EB00BDB700 /* QTRoundedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +462,7 @@
 		};
 		D48EBBB11C9990F900BDB700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DC0A2C7F0F661A8ADF97C6E /* Pods-Quam Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Quam Test/Info.plist";
@@ -270,6 +474,7 @@
 		};
 		D48EBBB21C9990F900BDB700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 170F1A2D8990FA4A235AB9BB /* Pods-Quam Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Quam Test/Info.plist";
@@ -298,6 +503,7 @@
 				D48EBBB21C9990F900BDB700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
