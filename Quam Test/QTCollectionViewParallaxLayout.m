@@ -16,32 +16,44 @@
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     UICollectionView *collectionView = [self collectionView];
-    UIEdgeInsets insets = [collectionView contentInset];
-    CGPoint offset = [collectionView contentOffset];
-    CGFloat minY = -insets.top;
-    NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
-    if (offset.y < minY) {
-        return attributes;
-    }
-    
+    CGFloat contentOffset = [collectionView contentOffset].y;
+    NSMutableArray *attributes = [[super layoutAttributesForElementsInRect:rect] mutableCopy];
+    UICollectionViewLayoutAttributes *mainHeaderAttributes = nil;
+    UICollectionViewLayoutAttributes *stickyHeaderAttributes = nil;
     for (UICollectionViewLayoutAttributes *attr in attributes) {
-        NSString *kind = attr.representedElementKind;
-        if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-            CGRect frame = attr.frame;
-            if (attr.indexPath.section == 1) {
-                frame.size.height = 80;
-                attr.zIndex = 1;
+        if ([attr.representedElementKind isEqualToString:UICollectionElementKindSectionHeader]) {
+            if (attr.indexPath.section == 0) {
+                mainHeaderAttributes = attr;
             } else {
-                CGFloat deltaY = ABS(offset.y - minY);
-                CGFloat offset = deltaY/3.0;
-                frame.origin.y = offset;
-                attr.zIndex = 0;
+                stickyHeaderAttributes = attr;
             }
-            attr.frame = frame;
         } else {
-            attr.zIndex = 1024;
+            attr.zIndex = 1;
         }
     }
+    
+    CGFloat mainHeaderHeight = 0;
+    if (mainHeaderAttributes) {
+        CGRect mainHeaderFrame = mainHeaderAttributes.frame;
+        mainHeaderFrame.origin.y = contentOffset/3.0;
+        mainHeaderAttributes.frame = mainHeaderFrame;
+        mainHeaderAttributes.zIndex = 0;
+        if (mainHeaderHeight != mainHeaderFrame.size.height) {
+            mainHeaderHeight = mainHeaderFrame.size.height;
+        }
+    }
+    
+    if (!stickyHeaderAttributes) {
+        stickyHeaderAttributes = [super layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader atIndexPath:[NSIndexPath indexPathForItem:0 inSection:1]];
+        [attributes addObject:stickyHeaderAttributes];
+    }
+
+    CGRect stickyHeaderFrame = stickyHeaderAttributes.frame;
+    if (contentOffset >= mainHeaderHeight) {
+        stickyHeaderFrame.origin.y = contentOffset;
+        stickyHeaderAttributes.frame = stickyHeaderFrame;
+    }
+    stickyHeaderAttributes.zIndex = 1024;
     return attributes;
 }
 

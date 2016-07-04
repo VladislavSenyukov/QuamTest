@@ -10,4 +10,5 @@
 
 @interface QTUserAdditionalHeader : UIView
 - (void)setup;
+- (void)updateLabelWithScrollOffset:(CGFloat)y;
 @end

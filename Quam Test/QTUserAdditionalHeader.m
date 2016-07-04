@@ -41,4 +41,19 @@
     }
 }
 
+- (void)updateLabelWithScrollOffset:(CGFloat)y {
+    CGFloat width = self.frame.size.width;
+    CGFloat rate = y/width;
+    if (rate > 1) {
+        return;
+    }
+    self.textLabel.alpha = rate;
+    CGAffineTransform transform = self.textLabel.layer.affineTransform;
+    CGFloat quota = 3;
+    CGFloat scale = 1-1/quota + rate/quota;
+    transform = CGAffineTransformMakeScale(scale, scale);
+    [self.textLabel.layer setAffineTransform:transform];
+    
+}
+
 @end

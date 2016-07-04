@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UIView *contentScrollView;
 @property (nonatomic) BOOL isScrollSetUp;
 @property (nonatomic, strong) QTUserInfoHeader *infoHeader;
+@property (nonatomic, strong) QTUserAdditionalHeader *additionalHeader;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @end
 
@@ -36,40 +37,41 @@
         scroll.showsHorizontalScrollIndicator = NO;
         scroll.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:scroll];
-        [self.contentView addSubview:self.pageControl];
-        
         NSDictionary *views = @{@"scroll" : scroll};
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[scroll]" options:0 metrics:nil views:views]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:scroll attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:scroll attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:scroll attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeHeight multiplier:1 constant:0]];
+        self.scrollView = scroll;
+        
+        [self.contentView addSubview:self.pageControl];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.pageControl attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.pageControl attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
-        self.scrollView = scroll;
+        
         
         UIView *contentView = self.contentScrollView;
         [scroll addSubview:contentView];
         [self updateContentSize];
-   
-        QTUserInfoHeader *view1 = self.infoHeader;
-        QTUserAdditionalHeader *view2 = [[QTUserAdditionalHeader alloc] init];
-        view2.translatesAutoresizingMaskIntoConstraints = NO;
-        
-        [contentView addSubview:view1];
-        [contentView addSubview:view2];
-        NSDictionary *viewsDic = @{@"scroll" : scroll, @"view1" : view1, @"view2" : view2};
-        NSArray *constraints = @[@"|-0-[view1]-0-[view2]", @"V:|-0-[view1]-0-|", @"V:|-0-[view2]-0-|"];
-        for (NSString *constraintStr in constraints) {
-            [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintStr options:0 metrics:nil views:viewsDic]];
-        }
-        
-        void (^setEqualSizeToView)(UIView*) = ^(UIView *view){
-            [scroll addConstraint:[NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:scroll attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
+
+        void (^addConstraintsToView)(UIView *view, NSArray *strings, NSDictionary *viewsDic);
+        addConstraintsToView = ^(UIView *view, NSArray *strings, NSDictionary *viewsDic) {
+            for (NSString *constraintStr in strings) {
+                [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintStr options:0 metrics:nil views:viewsDic]];
+            }
         };
-        setEqualSizeToView(view2);
-         setEqualSizeToView(view1);
+        
+        [contentView addSubview:self.infoHeader];
+        NSDictionary *viewsDic = @{@"info" : self.infoHeader};
+        NSArray *constraints = @[@"|-0-[info]", @"V:|-0-[info]-0-|"];
+        addConstraintsToView(contentView, constraints, viewsDic);
+        [scroll addConstraint:[NSLayoutConstraint constraintWithItem:self.infoHeader attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:scroll attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
         [self.infoHeader setup];
-        [view2 setup];
+        
+        [self.contentView insertSubview:self.additionalHeader belowSubview:scroll];
+        viewsDic = @{@"add_info" : self.additionalHeader};
+        constraints = @[@"|-0-[add_info]-0-|", @"V:|-0-[add_info]-0-|"];
+        addConstraintsToView(self.contentView, constraints, viewsDic);
+        [self.additionalHeader setup];
     }
 }
 
@@ -83,6 +85,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self updateContentSize];
+    CGFloat offset = self.scrollView.contentOffset.x;
+    [self.additionalHeader updateLabelWithScrollOffset:offset];
 }
 
 - (void)updateUI {
@@ -97,10 +101,17 @@
     [self.scrollView setContentOffset:currentContentOffset animated:YES];
 }
 
+#pragma mark - UIScrollView Delegate
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     CGFloat width = scrollView.frame.size.width;
     CGFloat offset = scrollView.contentOffset.x;
     self.pageControl.currentPage = (NSUInteger)(offset/width);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat offset = scrollView.contentOffset.x;
+    [self.additionalHeader updateLabelWithScrollOffset:offset];
 }
 
 #pragma mark - Getters/Setters
@@ -117,6 +128,14 @@
         _infoHeader.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return _infoHeader;
+}
+
+- (QTUserAdditionalHeader *)additionalHeader {
+    if (!_additionalHeader) {
+        _additionalHeader = [[QTUserAdditionalHeader alloc] init];
+        _additionalHeader.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    return _additionalHeader;
 }
 
 - (UIView *)contentScrollView {

@@ -12,16 +12,21 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        self.clipsToBounds = YES;
+        [self initialize];
     }
     return self;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.clipsToBounds = YES;
+        [self initialize];
     }
     return self;
+}
+
+- (void)initialize {
+    self.layer.masksToBounds = YES;
+    self.layer.shouldRasterize = YES;
 }
 
 - (void)layoutSubviews {
